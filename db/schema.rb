@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2021_04_30_215534) do
   enable_extension "plpgsql"
 
   create_table "albums", force: :cascade do |t|
+    t.string "album_id"
     t.string "name"
     t.string "genre"
     t.string "artist"
@@ -26,6 +27,7 @@ ActiveRecord::Schema.define(version: 2021_04_30_215534) do
   end
 
   create_table "artists", force: :cascade do |t|
+    t.string "artist_id"
     t.string "name"
     t.integer "age"
     t.string "albums"
@@ -36,6 +38,7 @@ ActiveRecord::Schema.define(version: 2021_04_30_215534) do
   end
 
   create_table "tracks", force: :cascade do |t|
+    t.string "track_id"
     t.string "name"
     t.float "duration"
     t.integer "times_played"
